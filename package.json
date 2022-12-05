@@ -1,0 +1,87 @@
+{
+  "name": "yugioh-diy",
+  "version": "3.7.0",
+  "description": "yugioh diy tool",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package": "electron-builder --dir",
+    "build": "electron-builder"
+  },
+  "keywords": [],
+  "author": "Mantodea",
+  "email": "2294632065@qq.com",
+  "homepage": "https://github.com/DDDDDragon/Yugioh-DIY",
+  
+  "license": "MIT",
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.3",
+    "@electron-forge/maker-deb": "^6.0.3",
+    "@electron-forge/maker-rpm": "^6.0.3",
+    "@electron-forge/maker-squirrel": "^6.0.3",
+    "@electron-forge/maker-zip": "^6.0.3",
+    "@vue/cli": "^5.0.8",
+    "electron": "^12.2.3",
+    "electron-builder": "^23.6.0"
+  },
+  "dependencies": {
+    "@vue/cli-service": "^5.0.8",
+    "axios": "^0.21.4",
+    "cropper": "^4.1.0",
+    "electron-squirrel-startup": "^1.0.0",
+    "element-plus": "^2.2.25",
+    "lzma-native": "^8.0.6",
+    "md5-node": "^1.0.1",
+    "moment": "^2.29.4",
+    "puppeteer-core": "^8.0.0",
+    "request": "^2.88.2",
+    "sql.js": "^1.8.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.3",
+    "vue": "^3.2.45",
+    "vue-cropper": "^1.0.5"
+  },
+  "build": {
+    "appId": "com.rarnu.diy",
+    "copyright": "rarnu",
+    "productName": "YGODIY",
+    "win": {
+      "target": [
+        "nsis",
+        "zip"
+      ],
+      "files": {
+        "filter": [
+          "!doc/*"
+        ]
+      },
+      "icon": "icon.ico"
+    },
+    "mac": {
+      "target": [
+        "zip",
+        "dmg"
+      ],
+      "files": {
+        "filter": [
+          "!doc/*"
+        ]
+      },
+      "icon": "icon.icns"
+    },
+    "linux": {
+      "target": [
+        "deb",
+        "rpm",
+        "zip"
+      ],
+      "maintainer": "rarnu",
+      "files": {
+        "filter": [
+          "!doc/*"
+        ]
+      },
+      "icon": "icon.png"
+    }
+  }
+}
